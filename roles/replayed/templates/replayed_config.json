@@ -1,0 +1,5 @@
+{
+  "BufferSizeInMB": 100
+  "ClientRequestBufferSizeInKB": 1
+  "Port": 8080
+}

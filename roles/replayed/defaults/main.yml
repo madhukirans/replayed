@@ -1,0 +1,6 @@
+replayed_config_dir: "/etc/replayed"
+replayed_config_file: "/etc/replayed/replayed.conf"
+
+replayed_binary_loc: "/usr/local/bin/replayed"
+
+

@@ -1,0 +1,7 @@
+---
+# defaults file for common
+#- name: be sure ntp is installed
+#  yum:
+#    name: ntp
+#    state: installed
+#  tags: ntp

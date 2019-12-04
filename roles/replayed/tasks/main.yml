@@ -1,0 +1,30 @@
+---
+# tasks file for replayed
+# Create directories up front
+# Note: elastalrt does not run as root!
+- name: Create directories for replayed
+  file:
+    path: "{{ item }}"
+    state: directory
+    owner: "root"
+    group: "root"
+    mode: 0750
+  with_items:
+    - "{{ replayed_config_dir }}"
+
+- name: Copy binary to distination
+  copy:
+    src: replayed.linux.amd64
+    dest: "{{ replayed_binary_loc }}"
+    owner: root
+    group: root
+    mode: 0700
+
+- name: Copy config replayed_config.json file
+  template:
+    src: templates/replayed_config.json
+    dest: /etc/replayed/replayed.conf
+    #{{ replayed_config_file }}
+    owner: root
+    group: root
+    mode: 0600
